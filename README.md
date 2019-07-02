@@ -15,6 +15,12 @@ REPLACE install.sh with the one I have in src
 
 THEN run the script ;-)
 
+Note, when you run the demos, instead of here:
+/usr/local/lib/python3.5/dist-packages/edgetpu/demo
+
+you need to be here!:
+/usr/local/lib/python3.7/dist-packages/edgetpu/demo
+
 This script does a number of things:
 
 Added:
