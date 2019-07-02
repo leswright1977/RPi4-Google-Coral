@@ -4,11 +4,16 @@ Google Coral on the Raspberry Pi 4
 
 The Google Coral Edge TPU device can be made to work with the Raspberry Pi 4 
 
+As per the instructions at: https://coral.withgoogle.com/docs/accelerator/get-started/
+
 wget https://dl.google.com/coral/edgetpu_api/edgetpu_api_latest.tar.gz -O edgetpu_api.tar.gz --trust-server-names
 tar xzf edgetpu_api.tar.gz
 cd edgetpu_api
 
+
 REPLACE install.sh with the one I have in src
+
+THEN run the script ;-)
 
 This script does a number of things:
 
