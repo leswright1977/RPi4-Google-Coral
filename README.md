@@ -18,23 +18,30 @@ THEN run the script ;-)
 This script does a number of things:
 
 Added:
+'''bash
   elif [[ "${MODEL}" == "Raspberry Pi 4 Model B Rev"* ]]; then #edit for rpi4
     info "Recognized as Raspberry Pi 4."
     LIBEDGETPU_SUFFIX=arm32
     HOST_GNU_TYPE=arm-linux-gnueabihf
+ '''
     
     
  Fixed this:
- sudo udevadm control --reload-rules && udevadm trigger 
+ '''bash
+ sudo udevadm control --reload-rules && udevadm trigger
+ '''
  to this:
+ '''bash
  sudo udevadm control --reload-rules && sudo udevadm trigger  #needed to put sudo in second half of command...
+ '''
  
  Finally as Raspian buster uses python 3.7 added:
- 
+ '''bash
  if [[ "${MODEL}" == "Raspberry Pi 4 Model B Rev"* ]]; then #edit for rpi4
     info "Lib Fu."
     sudo cp /usr/local/lib/python3.7/dist-packages/edgetpu/swig/_edgetpu_cpp_wrapper.cpython-35m-arm-linux-gnueabihf.so /usr/local/lib/python3.7/dist-packages/edgetpu/swig/_edgetpu_cpp_wrapper.cpython-37m-arm-linux-gnueabihf.so
 fi
+'''
 
 Note, all this does is copy the python wrapper (compiled for python 3.5) and use 37 instead of 35 in the filename. 
 Terrible undiscovered things may happen, or they may not, but it all seems to work for me!
