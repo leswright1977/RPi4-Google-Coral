@@ -25,7 +25,7 @@ frameWidth = 304
 frameHeight = 304
 camera = PiCamera()
 camera.resolution = (frameWidth,frameHeight)
-#camera.framerate = 90
+camera.framerate = 40
 rawCapture = PiRGBArray(camera, size=(frameWidth,frameHeight)) 
 
 # allow the camera to warmup
@@ -33,8 +33,15 @@ time.sleep(0.1)
 
 
 labels_file = 'tpu_models/coco_labels.txt'
+# Read labels from text files. Note, there are missing items from the coco_labels txt hence this!
+labels = [None] * 10
 with open(labels_file, 'r') as f:
-	labels = [x.strip() for x in f]
+	lines = f.readlines()
+for line in lines:
+	parts = line.strip().split(maxsplit=1)
+	labels.insert(int(parts[0]),str(parts[1])) 
+	
+print(labels)
 
 
 #define the function that handles our processing thread
@@ -47,7 +54,7 @@ def classify_frame(img, inputQueue, outputQueue):
 		if not inputQueue.empty():
 			# grab the frame from the input queue
 			img = inputQueue.get()
-			results = engine.DetectWithImage(img, threshold=0.4,\
+			results = engine.DetectWithImage(img, threshold=0.6,\
 			keep_aspect_ratio=True, relative_coord=False, top_k=10)
 
 			data_out = []
@@ -111,12 +118,7 @@ for frame in camera.capture_continuous(rawCapture, format="rgb", use_video_port=
 		# loop over the detections
 		for detection in out:
 			objID = detection[0]
-			try:
-				labeltxt = labels[objID]
-				labeltxt = labeltxt.split(" ", 1)
-				labeltxt = labeltxt[1]
-			except:
-				labeltxt = "..."
+			labeltxt = labels[objID]
 			confidence = detection[1]
 			xmin = detection[2]
 			ymin = detection[3]
