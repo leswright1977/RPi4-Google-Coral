@@ -8,7 +8,7 @@ This is sililar to the scripts I used with the NCS2, but for the Coral TPU.
 It is a test script, so models and labels are hardcoded. I wanted to it be as close to the original scripts I wrote for the NCS in order to do a fair comparison.
 
 So far, I am getting over 36FPS video and over 36FPS inferencing on a single TPU!
-I will do a proper test in the daylight. Insufficient lighting slows down the picam!
+I will do a proper test in the daylight. Room lights at night are not sufficient.
 
 ***Getting the Coral to work with the Pi 4***
 
