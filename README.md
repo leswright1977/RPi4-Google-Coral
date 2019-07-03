@@ -9,6 +9,7 @@ It is a test script, so models and labels are hardcoded. I wanted to it be as cl
 So far, I am getting over 34FPS video and over 34FPS inferencing on a single TPU!
 I will do a proper test in the daylight. Insufficient lighting slows down the picam!
 
+***Getting the Croal to work with the Pi 4***
 
 The Google Coral Edge TPU device can be made to work with the Raspberry Pi 4 
 
