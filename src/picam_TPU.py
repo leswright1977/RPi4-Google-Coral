@@ -111,9 +111,12 @@ for frame in camera.capture_continuous(rawCapture, format="rgb", use_video_port=
 		# loop over the detections
 		for detection in out:
 			objID = detection[0]
-			labeltxt = labels[objID]
-			labeltxt = labeltxt.split(" ", 1)
-			labeltxt = labeltxt[1]
+			try:
+				labeltxt = labels[objID]
+				labeltxt = labeltxt.split(" ", 1)
+				labeltxt = labeltxt[1]
+			except:
+				labeltxt = "..."
 			confidence = detection[1]
 			xmin = detection[2]
 			ymin = detection[3]
