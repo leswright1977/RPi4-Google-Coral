@@ -2,6 +2,7 @@
 Google Coral on the Raspberry Pi 4
 
 ***Update 3 July 2019***
+
 I have written a live object detection script (see src/picam_TPU.py)
 This is sililar to the scripts I used with the NCS2, but for the Coral TPU.
 It is a test script, so models and labels are hardcoded. I wanted to it be as close to the original scripts I wrote for the NCS in order to do a fair comparison.
@@ -9,7 +10,7 @@ It is a test script, so models and labels are hardcoded. I wanted to it be as cl
 So far, I am getting over 36FPS video and over 36FPS inferencing on a single TPU!
 I will do a proper test in the daylight. Insufficient lighting slows down the picam!
 
-***Getting the Croal to work with the Pi 4***
+***Getting the Coral to work with the Pi 4***
 
 The Google Coral Edge TPU device can be made to work with the Raspberry Pi 4 
 
