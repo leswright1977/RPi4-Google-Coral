@@ -6,7 +6,7 @@ I have written a live object detection script (see src/picam_TPU.py)
 This is sililar to the scripts I used with the NCS2, but for the Coral TPU.
 It is a test script, so models and labels are hardcoded. I wanted to it be as close to the original scripts I wrote for the NCS in order to do a fair comparison.
 
-So far, I am getting over 34FPS video and over 34FPS inferencing on a single TPU!
+So far, I am getting over 36FPS video and over 36FPS inferencing on a single TPU!
 I will do a proper test in the daylight. Insufficient lighting slows down the picam!
 
 ***Getting the Croal to work with the Pi 4***
