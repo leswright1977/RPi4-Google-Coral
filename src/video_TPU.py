@@ -143,6 +143,11 @@ while(cap.isOpened()):
 			queuepulls += 1
 
 		# Display the resulting frame
+		cv2.rectangle(frame, (0,0),\
+		(frameWidth,20), (0,0,0), -1)
+
+		cv2.rectangle(frame, (0,frameHeight-20),\
+		(frameWidth,frameHeight), (0,0,0), -1)
 		cv2.putText(frame,'Threshold: '+str(round(confThreshold,1)), (10, 10),\
 		cv2.FONT_HERSHEY_SIMPLEX, 0.3,(0, 255, 255), 1, cv2.LINE_AA)
 

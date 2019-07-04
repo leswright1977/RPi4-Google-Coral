@@ -54,7 +54,7 @@ def classify_frame(img, inputQueue, outputQueue):
 		if not inputQueue.empty():
 			# grab the frame from the input queue
 			img = inputQueue.get()
-			results = engine.DetectWithImage(img, threshold=0.6,\
+			results = engine.DetectWithImage(img, threshold=0.4,\
 			keep_aspect_ratio=True, relative_coord=False, top_k=10)
 
 			data_out = []
@@ -128,8 +128,9 @@ for frame in camera.capture_continuous(rawCapture, format="rgb", use_video_port=
 				#bounding box
 				cv2.rectangle(frame, (xmin, ymin), (xmax, ymax), color=(0, 255, 255))
 				#label
+				labLen = len(labeltxt)*5+40
 				cv2.rectangle(frame, (xmin-1, ymin-1),\
-				(xmin+70, ymin-10), (0,255,255), -1)
+				(xmin+labLen, ymin-10), (0,255,255), -1)
 				#labeltext
 				cv2.putText(frame,' '+labeltxt+' '+str(round(confidence,2)),\
 				(xmin,ymin-2), font, 0.3,(0,0,0),1,cv2.LINE_AA)
@@ -138,6 +139,12 @@ for frame in camera.capture_continuous(rawCapture, format="rgb", use_video_port=
 		queuepulls += 1
 
 	# Display the resulting frame
+	cv2.rectangle(frame, (0,0),\
+	(frameWidth,25), (0,0,0), -1)
+
+	cv2.rectangle(frame, (0,frameHeight-25),\
+	(frameWidth,frameHeight), (0,0,0), -1)
+
 	cv2.putText(frame,'Threshold: '+str(round(confThreshold,1)), (10, 10),\
 	cv2.FONT_HERSHEY_SIMPLEX, 0.3,(0, 255, 255), 1, cv2.LINE_AA)
 
@@ -185,4 +192,5 @@ for frame in camera.capture_continuous(rawCapture, format="rgb", use_video_port=
 		confThreshold = 0.4
 
 cv2.destroyAllWindows()
+
 
