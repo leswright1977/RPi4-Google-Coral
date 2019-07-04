@@ -4,7 +4,6 @@ Google Coral on the Raspberry Pi 4
 ***Video up on youtube***
 https://youtu.be/T-VjYr7sZC4
 
-
 ***Update 3 July 2019***
 
 I have written a live object detection script (see src/picam_TPU.py)
@@ -14,10 +13,14 @@ It is a test script, so models and labels are hardcoded. I wanted to it be as cl
 So far, I am getting over 36FPS video and over 36FPS inferencing on a single TPU!
 I will do a proper test in the daylight. Room lights at night are not sufficient.
 
+![Screenshot](src/home.gif)
+
 ***Update 4 July 2019***
 
 I have written another object detection script for video files (see src/video_TPU.py)
 Since we can push video through the loop as fast as we can, it is possible to get 70fps and still do reasonable inferencing!
+
+![Screenshot](src/traffic.gif)
 
 
 ***Getting the Coral to work with the Pi 4***
