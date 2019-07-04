@@ -1,6 +1,10 @@
 # RPi4-Google-Coral
 Google Coral on the Raspberry Pi 4
 
+***Video up on youtube***
+https://youtu.be/T-VjYr7sZC4
+
+
 ***Update 3 July 2019***
 
 I have written a live object detection script (see src/picam_TPU.py)
