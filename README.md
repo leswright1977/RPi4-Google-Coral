@@ -10,6 +10,12 @@ It is a test script, so models and labels are hardcoded. I wanted to it be as cl
 So far, I am getting over 36FPS video and over 36FPS inferencing on a single TPU!
 I will do a proper test in the daylight. Room lights at night are not sufficient.
 
+***Update 4 July 2019***
+
+I have written another object detection script for video files (see src/video_TPU.py)
+Since we can push video through the loop as fast as we can, it is possible to get 70fps and still do reasonable inferencing!
+
+
 ***Getting the Coral to work with the Pi 4***
 
 The Google Coral Edge TPU device can be made to work with the Raspberry Pi 4 
