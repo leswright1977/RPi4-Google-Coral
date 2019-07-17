@@ -96,7 +96,7 @@ queuepulls = 0
 timer2 = 0
 t2secs = 0
 
-for frame in camera.capture_continuous(rawCapture, format="rgb", use_video_port=True):
+for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=True):
 	if queuepulls ==1:
 		timer2 = time.time()
 	# Capture frame-by-frame
