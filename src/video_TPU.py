@@ -3,8 +3,6 @@ import time
 import numpy as np
 from multiprocessing import Process
 from multiprocessing import Queue
-from picamera.array import PiRGBArray
-from picamera import PiCamera
 
 import edgetpu.detection.engine
 from edgetpu.utils import image_processing
