@@ -1,6 +1,11 @@
 # RPi4-Google-Coral
 Google Coral on the Raspberry Pi 4
 
+***Update 19 July 2019***
+New version of the picam script picam_TPU2.py
+
+This uses the imutils lib to hit framerates of > 90fps using the picam...
+
 ***Video up on youtube***
 https://youtu.be/T-VjYr7sZC4
 
