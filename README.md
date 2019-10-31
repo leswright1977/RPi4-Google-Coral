@@ -1,6 +1,12 @@
 # RPi4-Google-Coral
 Google Coral on the Raspberry Pi 4
 
+***Update 31/10/2019***
+It looks like Coral software is now updated at https://coral.withgoogle.com/docs/accelerator/get-started/
+It mentions the RPi4, but does not specifically mention Buster.
+I will download a version probably over the weekend, to make sure my example scripts still run on it...
+
+
 ***Video up on youtube***
 https://youtu.be/T-VjYr7sZC4
 
