@@ -178,7 +178,7 @@ while(cap.isOpened()):
 			qfps = round(queuepulls/t2secs,2)
 
 
-		keyPress = cv2.waitKey(20) #Altering waitkey val can alter the framreate for vid files.
+		keyPress = cv2.waitKey(5) #Altering waitkey val can alter the framreate for vid files.
 		if keyPress == 113:
 			break
 		if keyPress == 82:
