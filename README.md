@@ -3,7 +3,7 @@ Google Coral on the Raspberry Pi 4
 
 ***Update 31/10/2019***
 It looks like Coral software is now updated at https://coral.withgoogle.com/docs/accelerator/get-started/
-Follow the installatio there now, and consider this install script deprecated.
+Follow the installation there now, and consider this install script deprecated.
 
 The example scripts I have provided still work however.
 Watch this space for more updated!
