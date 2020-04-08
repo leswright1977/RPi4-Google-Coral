@@ -9,7 +9,7 @@ The example scripts I have provided still work however.
 If you the new Coral install process, also install one of the Edge TPU API examples to satisfy dependencies before running my scripts.
 I use this one here: https://coral.ai/examples/classify-image/
 
-Yout will receive Warnings when the scripts run (DetectWithImage is now deprecated, use detect_with_images instead, an easy fix!)
+Yout will receive Warnings when the scripts run (DetectWithImage is now deprecated, use detect_with_image instead, an easy fix!)
 
 
 
